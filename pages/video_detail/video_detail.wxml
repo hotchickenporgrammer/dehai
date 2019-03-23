@@ -1,0 +1,17 @@
+<!--pages/video_detail/video_detail.wxml-->
+<view class='container'>
+    <view class='top'>
+      <view class='consult_title'>省体育中心家属院封堵剂视频</view>
+      <view class='consult_info'>
+          <text class='user_name'>dh_admin</text>
+          <text class='platform'> 天空湛蓝资讯平</text>
+      </view>
+      <view class='date'>2019年2月22日</view>
+    </view>
+    <video src="/video/ship.mp4" class='video' id='myvideo' bindended='videoend'>
+      <cover-view class='video_bg' wx:if="{{isShow}}">
+      <cover-image src='/img/video_img.png'></cover-image>
+      <cover-image src='/img/play.png' class='play' bindtap='hidebg'></cover-image>
+      </cover-view>
+    </video>
+</view>

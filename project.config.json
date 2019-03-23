@@ -1,0 +1,128 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.2",
+	"appid": "wx55805749b2f30d6c",
+	"projectname": "%E5%BE%B7%E6%B5%B7",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 11,
+			"list": [
+				{
+					"id": -1,
+					"name": "咨询",
+					"pathName": "pages/consult/consult",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "video",
+					"pathName": "pages/video/video",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "video_consult",
+					"pathName": "pages/video/video_consult/video_consult",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "video_detail",
+					"pathName": "pages/video_detail/video_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "故事",
+					"pathName": "pages/story/story",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "story_detail",
+					"pathName": "pages/story_detail/story_detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "推广",
+					"pathName": "pages/promote/promote",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "teasing",
+					"pathName": "pages/teasing/teasing",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "反馈",
+					"pathName": "pages/success/success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "profile",
+					"pathName": "pages/profile/profile",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "spend",
+					"pathName": "pages/spend/spend",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "turnover",
+					"pathName": "pages/turnover/turnover",
+					"scene": null
+				}
+			]
+		}
+	}
+}

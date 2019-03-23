@@ -1,0 +1,45 @@
+<!--pages/turnover/turnover.wxml-->
+<select_picker />
+<view class='select_nav'>
+  <view class='nav_top'>
+    <view class='nav_item {{isshow?"":"nav_no"}}' bindtap='showList'>
+      <view class='item_top'>
+        <image src='/img/text.png' wx:if="{{isshow}}" class='text_img'></image>
+        <image src='/img/text1.png' wx:if="{{!isshow}}" class='text1_img'></image>
+        当月订单量
+      </view>
+      <view>{{order_info[0].data.length}}条</view>
+    </view>
+    <view class='nav_item {{!isshow?"":"nav_no"}}' bindtap='showList'>
+      <view class='item_top'>
+        <image src='/img/yonghu.png' wx:if="{{!isshow}}" class='text_img'></image>
+        <image src='/img/yonghu1.png' wx:if="{{isshow}}" class='text1_img'></image>
+        我的会员
+      </view>
+      <view>{{order_info[1].data.length}}位</view>
+    </view>
+  </view>
+  <block wx:for="{{order_info[0].data}}" wx:key wx:for-item="i">
+    <view class='shoplist' wx:if="{{isshow}}">
+      <view class='item_left'>
+        <view class='num'>{{i.days}}</view>
+        <view class='time'>{{i.vip}}
+        </view>
+      </view>
+      <view class="item_right">营业额：
+        <text class='price'>￥{{i.money}}</text>
+      </view>
+    </view>
+  </block>
+  <block wx:for="{{order_info[1].data}}" wx:key wx:for-item="j">
+    <view class='shoplist' wx:if="{{!isshow}}">
+      <view class='item_left vip_left'>
+        <image src='{{j.avater}}' class="avater"></image>
+        <text>{{j.name}}</text>
+      </view>
+      <view class="item_right">营业额：
+        <text class='price'>￥{{j.money}}</text>
+      </view>
+    </view>
+  </block>
+</view>

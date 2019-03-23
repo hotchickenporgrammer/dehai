@@ -1,0 +1,87 @@
+<!--pages/video/video.wxml-->
+<scroll-view scroll-x="true" class='video-scroll'>
+  <block wx:for="{{story_arr}}" wx:key wx:for-item='i'>
+    <view class='video_item' bindtap='toVideoDetail' data-id="{{i.id}}">
+      <view class='video_title'>{{i.story_title}}</view>
+      <image src='{{i.story_img}}' mode='scaleToFill' class='video_img'>
+      </image>
+    </view> 
+  </block>
+</scroll-view>
+<view class='tab'>
+  <van-tabs active="{{ active }}" bind:change="onChange" swipeable="true" color="#00B900" nav-class="tabs">
+    <van-tab title="行业咨询" tab-class="tab_item">
+      <block wx:for="{{tabs[0]}}" wx:key wx:for-item="j">
+      <view class='tab_video_item' bindtap='toVideoDetail' data-id="{{j.id}}">
+        <view class='left'>
+          <view class='tab_video_title'>{{j.story_title}}</view>
+          <view class='tab_video_info'>
+            <image src='/img/yanjing.png'></image>
+            <text class='lookNum'>{{j.lookNum}}</text>
+            <text class='date'>{{j.date}}</text>
+          </view>
+        </view>
+        <view class='right'>
+          <image class="right_img" src='mode='scaleToFill' src='{{j.story_img}}'> 
+          </image>
+        </view>
+      </view>
+      </block>  
+    </van-tab>
+    <van-tab title="防锈常识" tab-class="tab_item">
+      <block wx:for="{{tabs[1]}}" wx:key wx:for-item="j">
+      <view class='tab_video_item' bindtap='toVideoDetail' data-id="{{j.id}}">
+        <view class='left'>
+          <view class='tab_video_title'>{{j.story_title}}</view>
+          <view class='tab_video_info'>
+            <image src='/img/yanjing.png'></image>
+            <text class='lookNum'>{{j.lookNum}}</text>
+            <text class='date'>{{j.date}}</text>
+          </view>
+        </view>
+        <view class='right'>
+          <image class="right_img" src='mode='scaleToFill' src='{{j.story_img}}'>  
+          </image>
+        </view>
+      </view>
+      </block>  
+    </van-tab>
+        <van-tab title="材料等级" tab-class="tab_item">
+      <block wx:for="{{tabs[2]}}" wx:key wx:for-item="j">
+      <view class='tab_video_item' bindtap='toVideoDetail' data-id="{{j.id}}">
+        <view class='left'>
+          <view class='tab_video_title'>{{j.story_title}}</view>
+          <view class='tab_video_info'>
+            <image src='/img/yanjing.png'></image>
+            <text class='lookNum'>{{j.lookNum}}</text>
+            <text class='date'>{{j.date}}</text>
+          </view>
+        </view>
+        <view class='right'>
+          <image class="right_img" src='mode='scaleToFill' src='{{j.story_img}}'> 
+          </image>
+        </view>
+      </view>
+      </block>  
+    </van-tab>
+        <van-tab title="防水常识" tab-class="tab_item">
+      <block wx:for="{{tabs[3]}}" wx:key wx:for-item="j">
+      <view class='tab_video_item' bindtap='toVideoDetail' data-id="{{j.id}}">
+        <view class='left'>
+          <view class='tab_video_title'>{{j.story_title}}</view>
+          <view class='tab_video_info'>
+            <image src='/img/yanjing.png'></image>
+            <text class='lookNum'>{{j.lookNum}}</text>
+            <text class='date'>{{j.date}}</text>
+          </view>
+        </view>
+        <view class='right'>
+          <image class="right_img" src='mode='scaleToFill' src='{{j.story_img}}'> 
+          </image>
+        </view>
+      </view>
+      </block>  
+    </van-tab>
+  </van-tabs>
+</view>
+

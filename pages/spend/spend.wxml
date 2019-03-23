@@ -1,0 +1,46 @@
+<!--pages/spend/spend.wxml-->
+<view class='container'>
+  <select_picker />
+  <view class='usual'>
+    <view class='top_title' bindtap='closedList'>
+      <image src='/img/puton.png' class='logo'></image>
+      <text>普通商品</text>
+      <image src='/img/xia.png' class='down {{isshow?"":"up"}}'></image>
+    </view>
+    <van-transition show="{{ isshow }}" name="fade-down" duration="500">
+    <block wx:for="{{order_info[0].data}}" wx:key wx:for-item="i">
+      <view class='shoplist'>
+        <view class='item_left'>
+          <view class='num'>下单编号：{{i.order_num}}</view>
+          <view class='time'>下单时间：{{i.days}}
+            <text class='pl'>{{i.time}}</text>
+          </view>
+        </view>
+        <view class="item_right">
+          <text class='price'>￥{{i.money}}</text>元</view>
+      </view>
+    </block>
+    </van-transition>
+  </view>
+  <view class='usual'>
+    <view class='top_title' bindtap='closedList1'>
+      <image src='/img/xieyi.png' class='logo'></image>
+      <text>标商/协议商品</text>
+      <image src='/img/xia.png' class='down {{isshow1?"":"up"}}'></image>
+    </view>
+    <van-transition show="{{ isshow1 }}" name="fade-down" duration="500">
+    <block wx:for="{{order_info[1].data}}" wx:key wx:for-item="j">
+      <view class='shoplist' wx:if="{{isshow1}}">
+        <view class='item_left'>
+          <view class='num'>下单编号：{{j.order_num}}</view>
+          <view class='time'>下单时间：{{j.days}}
+            <text class='pl'>{{j.time}}</text>
+          </view>
+        </view>
+        <view class="item_right">
+          <text class='price'>￥{{j.money}}</text>元</view>
+      </view>
+    </block>
+    </van-transition>
+  </view>
+</view>

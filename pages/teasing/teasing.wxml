@@ -1,0 +1,28 @@
+<!--pages/teasing/teasing.wxml-->
+<view class='container'>
+  <view class='teas_title'>我们竭尽全力，为您带来更好体验</view>
+  <view class='content'>
+    <textarea placeholder='请您的建议提交给我们, 我们会尽快反馈' placeholder-class="pla" class='text'></textarea>
+    <view class='upfile' bindtap='upfile'>
+      <image src='{{user_img}}' wx:if="{{isshow}}" class='user_img'></image>
+      <image class='upimg' src='/img/zhanxiangji.png'></image>
+      <view>添加图片</view>
+    </view>
+  </view>
+  <button class='btn'>提交</button>
+  <view class='help'>如需要帮助，请联系客服</view>
+  <view class='kefu'>
+    <view class='dianhua'>
+      <image src='/img/dianhua.png'></image>
+      <text class='foo'>电话客服</text>
+      <text>服务时间9：00-18：30</text>
+    </view>
+    <view class='dianhua'>
+      <image src='/img/rengong.png'></image>
+      <text class='foo'>电话客服</text>
+      <text>服务时间9：00-18：30</text>
+    </view>
+  </view>
+
+
+</view>

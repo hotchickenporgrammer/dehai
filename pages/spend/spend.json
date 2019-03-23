@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "select_picker": "/component/picker/picker",
+    "van-transition": "/dist/transition/index"
+  },
+  "navigationBarTitleText": "我的消费"
+}

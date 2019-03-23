@@ -1,0 +1,19 @@
+{
+  "pages": [
+    "pages/video/video",
+    "pages/video_detail/video_detail",
+    "pages/story/story",
+    "pages/story_detail/story_detail",
+    "pages/teasing/teasing",
+    "pages/success/success",
+    "pages/profile/profile",
+    "pages/spend/spend",
+    "pages/turnover/turnover"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  }
+}

@@ -1,0 +1,7 @@
+<!--pages/success/success.wxml-->
+<view class='container'>
+  <image src='/img/yes.png'></image>
+  <text class='yes'>提交成功</text>
+  <text class='center'>感谢您对我司提出的意见</text>
+  <text>也感谢您一直对我司的支持，祝你生活愉快</text>
+</view>

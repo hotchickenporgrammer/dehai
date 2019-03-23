@@ -1,0 +1,16 @@
+<!--pages/video_detail/video_detail.wxml-->
+<view class='container'>
+  <view class='header_top'>
+    <view class='consult_title'>省体育中心家属院封堵剂视频</view>
+    <view class='consult_info'>
+      <text class='user_name'>dh_admin</text>
+      <text class='platform'> 天空湛蓝资讯平</text>
+    </view>
+    <view class='infoDate'>2019年2月22日</view>
+  </view>
+  <view class='beg'>
+    <import src="/utils/wxParse/wxParse.wxml" />
+    <template is="wxParse" />
+    <!-- {{dot_text[0].text_content}} -->
+  </view>
+</view>
