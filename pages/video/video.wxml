@@ -10,7 +10,7 @@
   </block>
 </scroll-view>
 <view class='tab'>
-  <van-tabs active="{{ active }}" bind:change="onChange" swipeable="true" color="#00B900" nav-class="tabs">
+  <van-tabs active="{{ active }}" bind:change="onChange" swipeable="true"  animated="true" color="#00B900" nav-class="tabs">
     <van-tab title="行业咨询" tab-class="tab_item">
       <block wx:for="{{tabs[0]}}" wx:key wx:for-item="j">
       <view class='tab_video_item' bindtap='toVideoDetail' data-id="{{j.id}}">

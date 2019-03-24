@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 11,
+			"current": 12,
 			"list": [
 				{
 					"id": -1,
@@ -120,6 +120,13 @@
 					"id": -1,
 					"name": "turnover",
 					"pathName": "pages/turnover/turnover",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "order",
+					"pathName": "pages/order/order",
 					"scene": null
 				}
 			]

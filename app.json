@@ -8,7 +8,8 @@
     "pages/success/success",
     "pages/profile/profile",
     "pages/spend/spend",
-    "pages/turnover/turnover"
+    "pages/turnover/turnover",
+    "pages/order/order"
   ],
   "window": {
     "backgroundTextStyle": "light",

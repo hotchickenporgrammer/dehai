@@ -1,0 +1,128 @@
+<!--pages/order/order.wxml-->
+<view class='container'>
+  <van-tabs active="{{ active }}" animated="true" swipeable="true" sticky="true" color="#00B900">
+    <van-tab title="所有订单">
+      <block wx:for='{{shop_list.all_order}}' wx:key wx:for-item='i'>
+        <view class='shop_item'>
+          <view class='item_top'>
+            <image src="/img/puton.png"></image>
+            <text>{{i.shop_type}}</text>
+          </view>
+          <view class='is_shop'>
+            <view class='shop_left'>
+              <image src='{{i.shop_img}}'></image>
+            </view>
+            <view class='shop_right'>
+              <view class='shop_title'>{{i.shop_title}}</view>
+              <view class='type_num'>
+                <text class='type'>{{i.shop_name}}</text>
+                <text class='num'>x{{i.shop_num}}</text>
+              </view>
+              <view class='shop_money'>￥{{i.shop_money}}</view>
+            </view>
+          </view>
+          <view class='shop_info'>
+            <view>
+              <view>创建日期
+              </view>
+              <view class='info_date'>
+                <text>{{i.shop_date}}</text>
+                <text class='info_time'>{{i.shop_time}}</text>
+              </view>
+            </view>
+            <view class='income'>
+              <text>预估收入</text>
+              <text>￥{{i.shop_come}}元</text>
+            </view>
+            <view class='commission'>
+              <text>提成</text>
+              <text>{{i.shop_cmsn}}%</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </van-tab>
+    <van-tab title="有效订单">
+      <block wx:for='{{shop_list.effective_order}}' wx:key wx:for-item='j'>
+        <view class='shop_item'>
+          <view class='item_top'>
+            <image src="/img/puton.png"></image>
+            <text>{{j.shop_type}}</text>
+          </view>
+          <view class='is_shop'>
+            <view class='shop_left'>
+              <image src='{{j.shop_img}}'></image>
+            </view>
+            <view class='shop_right'>
+              <view class='shop_title'>{{j.shop_title}}</view>
+              <view class='type_num'>
+                <text class='type'>{{j.shop_name}}</text>
+                <text class='num'>x{{j.shop_num}}</text>
+              </view>
+              <view class='shop_money'>￥{{j.shop_money}}</view>
+            </view>
+          </view>
+          <view class='shop_info'>
+            <view>
+              <view>创建日期
+              </view>
+              <view class='info_date'>
+                <text>{{j.shop_date}}</text>
+                <text class='info_time'>{{j.shop_time}}</text>
+              </view>
+            </view>
+            <view class='income'>
+              <text>预估收入</text>
+              <text>￥{{j.shop_come}}元</text>
+            </view>
+            <view class='commission'>
+              <text>提成</text>
+              <text>{{j.shop_cmsn}}%</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </van-tab>
+    <van-tab title="失效订单">
+      <block wx:for='{{shop_list.failure_order}}' wx:key wx:for-item='k'>
+        <view class='shop_item'>
+          <view class='item_top'>
+            <image src="/img/puton.png"></image>
+            <text>{{k.shop_type}}</text>
+          </view>
+          <view class='is_shop'>
+            <view class='shop_left'>
+              <image src='{{k.shop_img}}'></image>
+            </view>
+            <view class='shop_right'>
+              <view class='shop_title'>{{k.shop_title}}</view>
+              <view class='type_num'>
+                <text class='type'>{{k.shop_name}}</text>
+                <text class='num'>x{{k.shop_num}}</text>
+              </view>
+              <view class='shop_money'>￥{{k.shop_money}}</view>
+            </view>
+          </view>
+          <view class='shop_info'>
+            <view>
+              <view>创建日期
+              </view>
+              <view class='info_date'>
+                <text>{{k.shop_date}}</text>
+                <text class='info_time'>{{k.shop_time}}</text>
+              </view>
+            </view>
+            <view class='income'>
+              <text>预估收入</text>
+              <text>￥{{k.shop_come}}元</text>
+            </view>
+            <view class='commission'>
+              <text>提成</text>
+              <text>{{k.shop_cmsn}}%</text>
+            </view>
+          </view>
+        </view>
+      </block>
+    </van-tab>
+  </van-tabs>
+</view>
