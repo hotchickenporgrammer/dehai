@@ -18,6 +18,23 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
+
+  toturnover:function(){
+    wx.navigateTo({
+      url: '/pages/turnover/turnover',
+    })
+  },
+  toorder:function(){
+    wx.navigateTo({
+      url: '/pages/order/order',
+    })
+  },
+  tospend:function(){
+    wx.navigateTo({
+      url: '/pages/spend/spend',
+    })
+  },
+
   onLoad: function (options) {
 
   },

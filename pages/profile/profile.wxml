@@ -48,7 +48,7 @@
         <text>合伙人</text>
       </view>
     </view>
-    <view class='list_item'>
+    <view class='list_item' bindtap='toturnover'>
       <view class='item_left'>
         <image src='/img/money.png' mode="widthFix"></image>
       </view>
@@ -57,7 +57,7 @@
         <text class='money'>{{turnover}}元</text>
       </view>
     </view>
-    <view class='list_item'>
+    <view class='list_item' bindtap='tospend'>
       <view class='item_left'>
         <image src='/img/comsume.png' mode="widthFix"></image>
       </view>
@@ -86,7 +86,7 @@
         <text class='info'>我推荐的会员明细</text>
       </view>
     </view>
-        <view class='list_item'>
+        <view class='list_item' bindtap='toorder'>
       <view class='item_left'>
         <image src='/img/check.png' mode="widthFix"></image>
       </view>
