@@ -1,0 +1,12 @@
+<!--pages/partner/partner.wxml-->
+<view class='container'>
+  <image src='/img/woshou.png' class='bg'></image>
+  <view class='item' bindtap='tofirm'>
+    <text>企业申请成为合伙人</text>
+    <image src='/img/right.png'></image>
+  </view>
+  <view class='item' bindtap='tonatural'>
+    <text>自然人申请成为合伙人</text>
+    <image src='/img/right.png'></image>
+  </view>
+</view> 

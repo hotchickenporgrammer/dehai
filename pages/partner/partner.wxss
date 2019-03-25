@@ -1,0 +1,24 @@
+/* pages/partner/partner.wxss */
+.container{
+  box-sizing: border-box;
+  padding: 40rpx 20rpx 0 20rpx;
+  width: 100vw;
+}
+.bg{
+  height:350rpx;
+  width: 100%;
+  border-radius:8rpx;
+}
+.item{
+  padding: 30rpx 0;
+  font-size: 28rpx;
+  color: #333;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.item image{
+  width:15rpx;
+  height:26rpx;
+}

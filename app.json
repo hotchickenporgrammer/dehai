@@ -9,7 +9,12 @@
     "pages/profile/profile",
     "pages/spend/spend",
     "pages/turnover/turnover",
-    "pages/order/order"
+    "pages/order/order",
+    "pages/partner/partner",
+    "pages/firm/firm",
+    "pages/promptly/promptly",
+    "pages/app_in/app_in",
+    "pages/app_in_two/app_in_two"
   ],
   "window": {
     "backgroundTextStyle": "light",

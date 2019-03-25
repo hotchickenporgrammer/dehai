@@ -1,0 +1,30 @@
+/* pages/firm/firm.wxss */
+.container{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.item{
+  padding: 30rpx 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:28rpx;
+  font-family:MicrosoftYaHei;
+  color:rgba(51,51,51,1);
+  border-bottom: 1px solid #eee;
+}
+.item:nth-child(1){
+  border-bottom: none;  
+}
+.item:nth-child(2){
+  border-bottom: none;
+  background:rgba(244,244,244,1);
+}
+.item:nth-child(2) image{
+  width:26rpx;
+  height:25rpx;
+}
+.item image{
+  width:15rpx;
+  height:26rpx;
+}

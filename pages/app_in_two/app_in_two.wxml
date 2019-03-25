@@ -1,0 +1,38 @@
+<!--pages/app_in_two/app_in_two.wxml-->
+<view class='container'>
+  <van-steps steps="{{ steps }}" active="{{ active }}" custom-class='step_h' />
+  <view class='idcard'>
+    <text>身份证号：</text>
+    <input placeholder='请输入身份证号'></input>
+  </view>
+  <view class='card_info'>证件信息：</view>
+  <view class='up_idcard'>
+    <view class='up_main' bindtap='upfile' data-index='0'>
+      <image src='/img/zhanxiangji.png' class='up_logo' wx:if="{{show[0].isshow}}"></image>
+      <image src='{{user_list[0].user_img}}' wx:if="{{!show[0].isshow}}" class='user_img'></image>
+      <text wx:if="{{show[0].isshow}}">上传身份证正面</text>
+    </view>
+    <view class='up_main' bindtap='upfile' data-index='1'>
+      <image src='/img/zhanxiangji.png' class='up_logo' wx:if="{{isshow[1].isshow}}"></image>
+      <text wx:if="{{isshow[1].isshow_2}}">上传身份证反面</text>
+    </view>
+  </view>
+  <view class='card_info'>手持身份证证件照：</view>
+  <view class='up_idcard'>
+    <view class='up_main'  bindtap='upfile' data-index='2'>
+      <image src='/img/zhanxiangji.png' wx:if="{{isshow[2].isshow_3}}" class='up_logo'></image>
+      <text wx:if="{{isshow[2].isshow_3}}">上传手持照</text>
+    </view>
+    <view class='up_main_two'>
+      <image src='/img/zhanxiangji.png' class='up_logo'></image>
+      <text>手持身份证照案例</text>
+    </view>
+  </view>
+  <view class='warning'>
+  <text>上传时请确保身份证照片内姓名，身份证，有效期清晰</text>
+  <text>文件仅支持：jpg、jpeg、png</text>
+  </view>
+</view>
+<view class='btn'>
+  <button>提交审核</button>
+</view>
