@@ -39,6 +39,6 @@
   <view class='warning'>文件仅支持：jpg、jpeg、png、pdf</view>
 </view>
 
-<view class='btn'>
+<view class='btn' bindtap="toapp_in">
   <button >下一步</button>
 </view>

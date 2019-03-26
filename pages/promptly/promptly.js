@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    active:'0',
     isshow: false,
     user_img: '',
     steps: [
@@ -23,7 +24,11 @@ Page({
   /**
    * 生命周期函数--监听页面加载
    */
-
+  toapp_in:function(){
+    wx.navigateTo({
+      url: '/pages/app_in/app_in',
+    })
+  },
 
   upfile: function () {
     var that = this

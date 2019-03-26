@@ -4,15 +4,19 @@
     <text>入驻类型：</text>
     <text>商务</text>
   </view>
-    <view class='item'>
+</view>
+<view class='item itembg'>
+  <view class='container'>
     <text>行业合伙人</text>
-    <image src='/img/xia.png'></image>    
+    <image src='/img/xia.png'></image>
   </view>
-    <view class='item'>
+</view>
+<view class='container'>
+  <view class='item' bindtap='topromptly'>
     <text>立即入驻</text>
     <image src='/img/right.png'></image>
   </view>
-  <view class='item'>
+  <view class='item' bindtap='tocontract'>
     <text>行业合伙人入驻说明</text>
     <image src='/img/right.png'></image>
   </view>
@@ -20,7 +24,7 @@
     <text>地区独家合伙人</text>
     <image src='/img/right.png'></image>
   </view>
-  <view class='item'>
+  <view class='item' bindtap='nopro'>
     <text>地区非独家合伙人</text>
     <image src='/img/right.png'></image>
   </view>

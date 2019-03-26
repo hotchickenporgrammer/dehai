@@ -8,6 +8,24 @@ Page({
 
   },
 
+
+  topromptly:function(){
+    wx.navigateTo({
+      url: '/pages/promptly/promptly',
+    })
+  },
+
+  tocontract:function(){
+    wx.navigateTo({
+      url: '/pages/contract/contract',
+    })
+  },
+
+  nopro:function(){
+    wx.navigateTo({
+      url: '/pages/no_promptly/no_promptly',
+    })
+  },
   /**
    * 生命周期函数--监听页面加载
    */

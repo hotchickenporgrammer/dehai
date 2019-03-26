@@ -48,7 +48,7 @@ Page({
         show_img[i].isshow = false
         that.setData({
           user_list: userlist,
-          isshow: false
+          show:show_img
         })
       },
     })

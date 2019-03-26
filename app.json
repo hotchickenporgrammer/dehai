@@ -1,12 +1,12 @@
 {
   "pages": [
+    "pages/profile/profile",
     "pages/video/video",
     "pages/video_detail/video_detail",
     "pages/story/story",
     "pages/story_detail/story_detail",
     "pages/teasing/teasing",
     "pages/success/success",
-    "pages/profile/profile",
     "pages/spend/spend",
     "pages/turnover/turnover",
     "pages/order/order",
@@ -14,7 +14,21 @@
     "pages/firm/firm",
     "pages/promptly/promptly",
     "pages/app_in/app_in",
-    "pages/app_in_two/app_in_two"
+    "pages/app_in_two/app_in_two",
+    "pages/rejected/rejected",
+    "pages/partner_success/partner_success",
+    "pages/contract/contract",
+    "pages/xinye_promptly/xinye_promptly",
+    "pages/no_promptly/no_promptly",
+    "pages/no_heton/no_heton",
+    "pages/cred/cred",
+    "pages/no_real/no_real",
+    "pages/xinye_heton/xinye_heton",
+    "pages/xinye_card/xinye_card",
+    "pages/xinye_no_msg/xinye_no_msg",
+    "pages/xinye_no_heton/xinye_no_heton",
+    "pages/anter/anter"
+
   ],
   "window": {
     "backgroundTextStyle": "light",

@@ -43,7 +43,7 @@
       <view class='item_left'>
         <image src='/img/nokia.png' mode="widthFix"></image>
       </view>
-      <view class='item_right'>
+      <view class='item_right' bindtap='topartner'>
         <text>申请成为</text>
         <text>合伙人</text>
       </view>

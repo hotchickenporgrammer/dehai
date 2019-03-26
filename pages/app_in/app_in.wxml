@@ -11,5 +11,5 @@
   </view>
 </view>
 <view class='btn'>
-  <button disabled='{{!ischeck}}'>下一步</button>
+  <button disabled='{{!ischeck}}' bindtap='toapp_two'>下一步</button>
 </view>

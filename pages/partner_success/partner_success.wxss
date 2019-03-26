@@ -1,0 +1,23 @@
+/* pages/partner_success/partner_success.wxss *//* pages/success/success.wxss */
+.container{
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+}
+
+.center{
+  padding-top: 100rpx;
+}
+image{
+  width:131rpx;
+  height:120rpx;
+  margin-top: 246rpx;
+}
+text{
+  font-size:32rpx;
+  font-family:MicrosoftYaHei;
+  color:rgba(51,51,51,1);
+}

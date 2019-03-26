@@ -13,13 +13,13 @@ Page({
 
   tofirm(){
     wx.navigateTo({
-      url: '',
+      url: '/pages/firm/firm',
     })
   },
 
   tonatural(){
     wx.navigateTo({
-      url: '',
+      url: '/pages/anter/anter',
     })
   },
 

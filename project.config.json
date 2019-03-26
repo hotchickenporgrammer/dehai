@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 18,
+			"current": 30,
 			"list": [
 				{
 					"id": -1,
@@ -169,6 +169,91 @@
 					"id": -1,
 					"name": "app_in_two",
 					"pathName": "pages/app_in_two/app_in_two",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "反馈",
+					"pathName": "pages/rejected/rejected",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "审核中",
+					"pathName": "pages/partner_success/partner_success",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "合约",
+					"pathName": "pages/contract/contract",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "行业合伙人入驻申请",
+					"pathName": "pages/no_promptly/no_promptly",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "非_合同",
+					"pathName": "pages/no_heton/no_heton",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "非_凭证",
+					"pathName": "pages/cred/cred",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "实名认证",
+					"pathName": "pages/no_real/no_real",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "自然人_合作合同",
+					"pathName": "pages/xinye_heton/xinye_heton",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "自然人_凭证",
+					"pathName": "pages/xinye_card/xinye_card",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "自然人_个人信息",
+					"pathName": "pages/xinye_no_msg/xinye_no_msg",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "自然人_合同",
+					"pathName": "pages/xinye_no_heton/xinye_no_heton",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "自然人_非_heton",
+					"pathName": "pages/xinye_no_heton/xinye_no_heton",
+					"query": "",
 					"scene": null
 				}
 			]

@@ -1,0 +1,57 @@
+<!--pages/promptly/promptly.wxml-->
+<view class='container'>
+  <van-steps steps="{{ steps }}" active="{{ active }}" custom-class='step_h' />
+  <view class='item'>
+    <text>行业类别：</text>
+    <input type='text' placeholder='例：建筑行业'></input>
+  </view>
+  <view class='item'>
+    <text>联系人姓名：</text>
+    <input type='text ' placeholder='请输入联系人姓名 '></input>
+  </view>
+  <view class='item'>
+    <text>联系人电话：</text>
+    <input type='text' placeholder='请输入联系人电话 '></input>
+  </view>
+  <view class='item'>
+    <text>联系人地址：</text>
+    <input type='text' placeholder='请输入联系人地址'></input>
+  </view>
+  <view class='item'>
+    <text>身份证号码：</text>
+    <input type='text' placeholder='请输入身份证号码'></input>
+  </view>
+  <view class='card_info'>证件信息：</view>
+  <view class='up_idcard'>
+    <view class='up_main' bindtap='upfile' data-index='0'>
+      <image src='/img/zhanxiangji.png' class='up_logo ' wx:if="{{show[0].isshow}}"></image>
+      <image src='{{user_list[0].user_img}}' wx:if="{{!show[0].isshow}}" class='user_img'></image>
+      <text wx:if="{{show[0].isshow}}">上传身份证正面</text>
+    </view>
+    <view class='up_main' bindtap='upfile' data-index='1'>
+      <image src='/img/zhanxiangji.png' class='up_logo ' wx:if="{{show[1].isshow}}"></image>
+      <image src='{{user_list[1].user_img}}' wx:if="{{!show[1].isshow}}" class='user_img'></image>
+      <text wx:if="{{show[1].isshow}}">上传身份证反面</text>
+    </view>
+  </view>
+  <view class='card_info'>手持身份证证件照：</view>
+  <view class='up_idcard'>
+    <view class='up_main' bindtap='upfile' data-index='2'>
+      <image src='/img/zhanxiangji.png' wx:if="{{show[2].isshow}}" class='up_logo'></image>
+      <image src='{{user_list[2].user_img}} ' wx:if="{{!show[2].isshow}}" class='user_img'></image>
+      <text wx:if="{{show[2].isshow}}">上传手持照</text>
+    </view>
+    <view class='up_main_two'>
+      <image src='/img/anli.png' class='up_logo'></image>
+      <text>手持身份证照案例</text>
+    </view>
+  </view>
+  <view class='warning'>
+    <text>上传时请确保身份证照片内姓名，身份证，有效期清晰</text>
+    <text>文件仅支持：jpg、jpeg、png</text>
+  </view>
+</view>
+
+<view class='btn'>
+  <button bindtap='toxinye_no'>下一步</button>
+</view>

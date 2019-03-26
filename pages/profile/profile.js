@@ -34,6 +34,11 @@ Page({
       url: '/pages/spend/spend',
     })
   },
+  topartner:function(){
+    wx.navigateTo({
+      url: '/pages/partner/partner',
+    })
+  },
 
   onLoad: function (options) {
 

@@ -21,7 +21,11 @@ Page({
     ]
   },
 
-
+  toapp_two(){
+    wx.navigateTo({
+      url: '/pages/app_in_two/app_in_two',
+    })
+  },
 
   onischeck(){
     this.setData({
