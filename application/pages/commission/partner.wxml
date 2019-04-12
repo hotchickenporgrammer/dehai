@@ -1,0 +1,16 @@
+<block wx:if='{{!show}}'>
+  <loading>加载中...</loading>
+</block>
+<block wx:if='{{show}}'>
+<view class='container'>
+  <image src='http://img2.y01.cn/images/4/2019/04/sx0A774xZa61197J70mmPPme92S970.png' class='bg'></image>
+  <view class='item' data-type="2" bindtap='tonatural'>
+    <text>企业申请成为合伙人</text>
+    <image src='/img/right.png'></image>
+  </view>
+  <view class='item' data-type="1" bindtap='tonatural'>
+    <text>自然人申请成为合伙人</text>
+    <image src='/img/right.png'></image>
+  </view>
+</view>
+</block>

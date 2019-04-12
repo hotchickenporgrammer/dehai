@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    
+    "van-transition": "/vant-ui/transition/index"
+  },
+  "navigationBarTitleText": "我的消费"
+}

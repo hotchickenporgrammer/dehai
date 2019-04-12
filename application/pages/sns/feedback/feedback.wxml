@@ -1,0 +1,38 @@
+<block wx:if='{{!isshow}}'>
+  <loading>加载中...</loading>
+</block>
+<block wx:if='{{isshow}}'>
+<view class='container'>
+  <view class='teas_title'>我们竭尽全力，为您带来更好体验</view>
+  <view class='content'>
+    <textarea bindinput='onchange' placeholder='请您的建议提交给我们, 我们会尽快反馈' placeholder-class="pla" class='text'></textarea>
+    <block wx:if='{{imgs}}'>
+      <block wx:for="{{imgs}}" wx:key wx:for-item="item">
+      <view class='fui-images fui-images-sm'>
+        <image data-index='{{item}}' src='{{item}}' class='image image-sm' style="width:120rpx;height:120rpx;">
+        <text data-index='{{item}}' class='image-remove' data-type='image-remove' catchtap='upload'>×</text></image>
+      </view>
+      </block>
+    </block>
+    <view class='upfile' data-type='image' catchtap='upload'>
+      <image class='upimg' src='/img/zhanxiangji.png'></image>
+      <view>添加图片</view>
+    </view>
+  </view>
+  <view class="sub"><view class='btn' bindtap='submit'>提交</view></view>
+  <view class='help'>如需要帮助，请联系客服</view>
+  <view class='kefu'>
+    <view class='dianhua'>
+      <image src='/img/dianhua.png'></image>
+      <text class='foo'>电话客服</text>
+      <text>服务时间9：00-18：30</text>
+    </view>
+    <view class='dianhua'>
+      <image src='/img/rengong.png'></image>
+      <text class='foo'>电话客服</text>
+      <text>服务时间9：00-18：30</text>
+    </view>
+  </view>
+</view>
+</block>
+<include src='/pages/common/menu.wxml' />

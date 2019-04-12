@@ -1,0 +1,50 @@
+<view wx:if="{{item.data.length > 0}}" class="icon_group">
+  <view class="fui-icon-group bs col-{{item.style.rownum?item.style.rownum:4}} noborder {{item.style.navstyle?item.style.navstyle:''}}" style="{{item.style.background?'background:'+item.style.background+';':''}}">
+    <block wx:for='{{item.data}}' wx:for-item='item' wx:for-index='idx' wx:key="nav">
+      <view bindtap="navigate" class="fui-icon-col external" data-appid="{{item.appid}}" data-appurl="{{item.appurl}}" data-phone="{{item.phone}}" data-url="{{item.linkurl}}">
+        <view>
+          <image style='padding-top:10rpx;'  src='{{item.imgurl}}'></image>
+        </view>
+        <view class='navs-navname' style="{{item.color?'color:'+item.color+';':''}} padding-top:10rpx;">{{item.text}}</view>
+      </view>
+    </block>
+  </view>
+</view>
+<view class='tab_nav'>
+  <van-tabs active="{{active}}" bind:change="tabChange" sticky="{{sticky}}" id="tabbar" color="#00B900">
+    <block wx:for='{{category}}' wx:for-item='item' wx:for-index='indexs' wx:key="cate">
+      <van-tab title="{{item.name}}">
+        <block wx:for='{{item.goods}}' wx:for-item='items' wx:for-index='indexss' wx:key="cates">
+          <view class='tab_content'>
+            <view style="padding:2rpx 2rpx 20rpx 2rpx;">
+              <navigator url='/pages/goods/detail/index?id={{items.id}}' open-type='navigate'>
+                <view class='img_content'>
+                  <image mode="scaleToFill" src="{{items.shopthumb}}" class="advimg"></image>
+                </view>
+                <view class='shop_info'>
+                  <view class='shop_info_text'>{{items.title}}</view>
+                  <view class='shop_info_money'><view>￥{{items.marketprice}}</view></view>
+                </view> 
+              </navigator>
+            </view>
+          </view>
+        </block>
+        <view class="fui-goods-group" wx:if='{{!item.goods.length}}'>
+          <view class="fui-goods-item">
+            <view style="text-align:center;width:100%;padding-top:30rpx;">
+              <image src="http://img2.y01.cn/images/4/2019/02/x607LlH7e2797Q55676Uo6Dl0EMoL6.png"></image>
+              <view style="padding-top:15rpx;padding-bottom:15rpx;font-size:25rpx;color:#7D7E80;">暂无数据！</view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+    </block>
+  </van-tabs>
+  <navigator url="/pages/goods/index/index">
+    <view class="fui-line">
+      <view class="text text-danger">
+        <text class="icon icon-likefill" style='color:#00B900;'>查看更多</text>
+      </view>
+    </view>
+  </navigator>
+</view>

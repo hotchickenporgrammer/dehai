@@ -1,0 +1,81 @@
+<loading wx:if="{{!show}}">加载中...</loading>
+<view class="page navbar" wx:if="{{show}}">
+  <view class='fui-list-group' style="margin-top:0;padding-top:10px;">
+    <view class='fui-list'>
+      <view class='fui-list-media'>
+        <image src='{{member.avatar}}' class='myimages' style="width:150rpx;height:150rpx;"></image>
+      </view>
+      <view class='fui-list-inner'>
+        <view class='subtitle'>用户名：{{member.nickname}}</view>
+        <view class='subtitle'>推荐人：{{agent.nickname}}</view>
+        <view class='subtitle'>等级：{{member.levelname}}</view>
+      </view>
+      <view class='price text-right' bindtap='usershare'>
+        <image src="/static/images/icon-white/erweima.png"></image>
+        <view class='text-right'><text style="color:#8a8a8a;font-size:20rpx;">推广二维码</text></view>
+      </view>
+    </view>
+  </view>
+  <view class='fui-list-group'>
+    <view class='fui-list'>
+      <view class='fui-list-media'>
+        <view class="usertext">屏蔽我的会员</view>
+      </view>
+      <view class='fui-list-inner'>
+        <view><image src="/static/images/icon-white/wenhao.png" style="width:40rpx;height:40rpx;"></image></view>
+      </view>
+      <view class='price text-right' bindtap="downshow" data-downshow="{{isshowdown}}">
+        <view class='text-right' style="color:#8a8a8a;font-size:30rpx;">
+          <block wx:if="{{isshowdown=='1'}}">
+            <image src="/static/images/kai.png"></image>
+          </block>
+          <block wx:else>
+          <image src="/static/images/guan.png"></image>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="myusers">
+      <view class='myusers-media'>
+        <view class="myuserstext">{{agentnum.total}}</view>
+        <view class="myusers-inner">我的会员</view>
+      </view>
+      <view class='text-right' style="width:25%;">
+        <view bindtap='userinfos'>
+          <view class='text-right myinfos'>会员明细</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='fui-list-group'>
+    <view class='fui-list'>
+      <view class='fui-list-media'>
+        <view class="usertext">放弃我的佣金</view>
+      </view>
+      <view class='fui-list-inner'>
+        <view><image src="/static/images/icon-white/wenhao.png" style="width:40rpx;height:40rpx;"></image></view>
+      </view>
+      <view class='price text-right' bindtap="abandon" data-isabandon="{{isabandon}}">
+        <view class='text-right' style="color:#8a8a8a;font-size:30rpx;">
+          <block wx:if="{{isabandon=='1'}}">
+            <image src="/static/images/kai.png"></image>
+          </block>
+          <block wx:else>
+          <image src="/static/images/guan.png"></image>
+          </block>
+        </view>
+      </view>
+    </view>
+    <view class="myusers">
+      <view class='myusers-media'>
+        <view class="myuserstext">{{return_member.commission_ok}}</view>
+        <view class="myusers-inner">可提现佣金（元）</view>
+      </view>
+      <view class='text-right' style="width:25%;">
+        <vieww bindtap="mymoney">
+          <view class='text-right myinfos'>佣金提现</view>
+        </vieww>
+      </view>
+    </view>
+  </view>
+</view>

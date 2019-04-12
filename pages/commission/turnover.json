@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-transition": "/vant-ui/transition/index"
+  },
+  "navigationBarTitleText": "营业额"
+}

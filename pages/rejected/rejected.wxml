@@ -1,9 +1,0 @@
-<!--pages/rejected/rejected.wxml-->
-<view class='container'>
-  <image src='/img/cha.png'></image>
-  <view class='content_text'>
-    <text>您的资料不齐全</text>
-    <text>请重新填写并提交管理员后台审核</text>
-  </view>
-  <button class='btn' bindtap="toprofile">重新提交资料</button>
-</view>

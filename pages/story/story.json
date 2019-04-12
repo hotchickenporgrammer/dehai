@@ -1,7 +1,0 @@
-{
-  "usingComponents": {
-    "van-tab": "/dist/tab/index",
-    "van-tabs": "/dist/tabs/index"
-  },
-  "navigationBarTitleText": "严防故事"
-}

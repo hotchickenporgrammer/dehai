@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "van-steps": "/vant-ui/steps/index",
+    "van-icon": "/vant-ui/icon/index"
+  }
+}

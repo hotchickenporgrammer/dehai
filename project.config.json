@@ -1,23 +1,16 @@
 {
-	"description": "项目配置文件",
-	"packOptions": {
-		"ignore": []
-	},
+	"description": "项目配置文件。",
 	"setting": {
-		"urlCheck": true,
+		"urlCheck": false,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
-		"newFeature": true,
-		"autoAudits": false
+		"newFeature": true
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.6.2",
-	"appid": "wx55805749b2f30d6c",
-	"projectname": "%E5%BE%B7%E6%B5%B7",
-	"debugOptions": {
-		"hidedInDevtools": []
-	},
+	"libVersion": "2.2.4",
+	"appid": "wxf506bab3e6088db2",
+	"projectname": "dehai",
 	"isGameTourist": false,
 	"condition": {
 		"search": {
@@ -37,223 +30,142 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 30,
+			"current": 19,
 			"list": [
 				{
+					"id": 0,
+					"name": "多商户中心",
+					"pathName": "pages/changce/merch/index",
+					"query": ""
+				},
+				{
+					"id": 1,
+					"name": "会员中心",
+					"pathName": "pages/member/index/index",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "商品详情",
+					"pathName": "pages/goods/detail/index",
+					"query": "id=199&frommyshop=1"
+				},
+				{
 					"id": -1,
-					"name": "咨询",
-					"pathName": "pages/consult/consult",
+					"name": "商品详情",
+					"pathName": "pages/goods/detail/index",
+					"query": "id=199&frommyshop=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "线上商品详情",
+					"pathName": "pages/goods/detail/index",
+					"query": "id=15719&frommyshop=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "线上添加收货地址",
+					"pathName": "pages/member/address/post",
+					"query": "type=quickaddress",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "线上下单",
+					"pathName": "pages/order/create/index",
+					"query": "id=15719&total=1&optionid=0",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "购物车",
+					"pathName": "pages/member/cart/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": 10,
+					"name": "订单详情",
+					"pathName": "pages/order/detail/index",
+					"query": "id=47922",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "分类",
+					"pathName": "pages/shop/caregory/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "video",
-					"pathName": "pages/video/video",
+					"name": "商品详情",
+					"pathName": "pages/order/create/index",
+					"query": "id=199&frommyshop=1",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "支付页面",
+					"pathName": "pages/order/pay/index",
+					"query": "id=47915&isiden=1",
+					"scene": null
+				},
+				{
+					"id": 14,
+					"name": "招投标下单",
+					"pathName": "pages/order/pay/contract",
+					"query": "id=47922&isiden=1",
+					"scene": null
+				},
+				{
+					"id": 13,
+					"name": "下单",
+					"pathName": "pages/order/create/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "video_consult",
-					"pathName": "pages/video/video_consult/video_consult",
+					"name": "我的会员",
+					"pathName": "pages/member/mymember/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "video_detail",
-					"pathName": "pages/video_detail/video_detail",
+					"name": "我的佣金",
+					"pathName": "pages/commission/withdraw/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "故事",
-					"pathName": "pages/story/story",
+					"name": "zhaotoubiao",
+					"pathName": "pages/shop/caregory/index",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "story_detail",
-					"pathName": "pages/story_detail/story_detail",
+					"name": "小视频",
+					"pathName": "application/pages/sns/video/video",
 					"query": "",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "推广",
-					"pathName": "pages/promote/promote",
-					"query": "",
+					"name": "视频详情",
+					"pathName": "application/pages/sns/video/video_detail",
+					"query": "id=2",
 					"scene": null
 				},
 				{
 					"id": -1,
-					"name": "teasing",
-					"pathName": "pages/teasing/teasing",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "反馈",
-					"pathName": "pages/success/success",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "profile",
-					"pathName": "pages/profile/profile",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "spend",
-					"pathName": "pages/spend/spend",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "turnover",
-					"pathName": "pages/turnover/turnover",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "order",
-					"pathName": "pages/order/order",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "profile",
-					"pathName": "pages/profile/profile",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "合伙人",
-					"pathName": "pages/partner/partner",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "企业合伙人",
-					"pathName": "pages/firm/firm",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "立即入驻",
-					"pathName": "pages/promptly/promptly",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "申请入驻",
-					"pathName": "pages/app_in/app_in",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "app_in_two",
-					"pathName": "pages/app_in_two/app_in_two",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "反馈",
-					"pathName": "pages/rejected/rejected",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "审核中",
-					"pathName": "pages/partner_success/partner_success",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "合约",
-					"pathName": "pages/contract/contract",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "行业合伙人入驻申请",
-					"pathName": "pages/no_promptly/no_promptly",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "非_合同",
-					"pathName": "pages/no_heton/no_heton",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "非_凭证",
-					"pathName": "pages/cred/cred",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "实名认证",
-					"pathName": "pages/no_real/no_real",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "自然人_合作合同",
-					"pathName": "pages/xinye_heton/xinye_heton",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "自然人_凭证",
-					"pathName": "pages/xinye_card/xinye_card",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "自然人_个人信息",
-					"pathName": "pages/xinye_no_msg/xinye_no_msg",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "自然人_合同",
-					"pathName": "pages/xinye_no_heton/xinye_no_heton",
-					"query": "",
-					"scene": null
-				},
-				{
-					"id": -1,
-					"name": "自然人_非_heton",
-					"pathName": "pages/xinye_no_heton/xinye_no_heton",
-					"query": "",
+					"name": "tucao",
+					"pathName": "application/pages/sns/feedback/feedback",
 					"scene": null
 				}
 			]

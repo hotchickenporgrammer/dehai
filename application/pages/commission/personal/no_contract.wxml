@@ -1,0 +1,31 @@
+<block wx:if='{{!show}}'>
+  <loading>加载中...</loading>
+</block>
+<block wx:if='{{show}}'>
+<view class='container'>
+  <van-steps steps="{{ steps }}" active="{{ active }}" custom-class='step_h' />
+  <scroll-view scroll-y='true' class='scroll'>
+    <block wx:if="{{contract.length>'0'}}">
+    <view class="content-text">
+      <import src="/utils/wxParse/wxParse.wxml" />
+        <view class='wxParse'>
+          <template is='wxParse' data='{{wxParseData:content.nodes }}' />
+        </view>
+    </view>
+    </block>
+    <block wx:else>
+    <view class="content-text" style="text-align:center;color:#666;margin-top:50rpx;">
+    没有找到相关数据！
+    </view>
+    </block>
+  </scroll-view>
+  <view class='yorn'>
+    <checkbox checked='{{ischeck}}' bindtap='onischeck' class='check'></checkbox>
+    <text class="read" bindtap='toTerms'>我已仔细阅读以上合同条例，同意并遵守确认合同里的条例。
+    </text>
+  </view>
+</view>
+<view class='btns'>
+  <button disabled='{{!ischeck}}' bindtap='submit'>提交审核</button>
+</view>
+</block>

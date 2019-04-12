@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "van-steps": "/vant-ui/steps/index"
+  }
+}

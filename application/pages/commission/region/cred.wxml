@@ -1,0 +1,35 @@
+<!--pages/cred/cred.wxml-->
+<view class='container'>
+  <van-steps steps="{{ steps }}" active="{{ active }}" custom-class='step_h' />
+  <view wx:if="{{level.level=='96'||level.level=='98'}}" class='item'>
+    <text>加盟费：</text>
+    <input type='text' data-type="franchise_price" bindinput='onChange' placeholder=''></input>
+  </view>
+    <view class='item'>
+    <text>进货费：</text>
+    <input type='text' data-type="purchase_price" bindinput='onChange' placeholder=''></input>
+  </view>
+    <view class='item'>
+    <text>总汇款金额：</text>
+    <input type='text' data-type="total_price" bindinput='onChange' placeholder=''></input>
+  </view>
+    <view class='item'>
+    <text>汇款银行：</text>
+    <input type='text' data-type="bank" bindinput='onChange' placeholder='例：中国银行'></input>
+  </view>
+    <view class='item'>
+    <text>汇款卡号：</text>
+    <input type='text' data-type="cardnum" bindinput='onChange' placeholder='例：请输入银行卡号'></input>
+  </view>
+  <view class='upfile'>
+    <text>上传汇款凭证：</text>
+    <view class='toup'>
+      <image src='{{img}}' wx:if="{{img}}" class='user_img'></image>
+      <image src='/img/jia.png' class='upimg' bindtap='upload' wx:if='{{!img}}'></image>
+    </view>
+  </view>
+  <view class='warning'>文件仅支持：jpg、jpeg、png、pdf</view>
+</view>
+<view class='btns'>
+  <button bindtap='submit'>下一步</button>
+</view>

@@ -1,0 +1,33 @@
+<block wx:if='{{!show}}'>
+  <loading>加载中...</loading>
+</block>
+<block wx:if='{{show}}'>
+<view class='container'>
+  <van-steps steps="{{ steps }}" active="{{ active }}" custom-class='step_h' />
+  <view class='content_body'>
+    <view class='case_heton'>
+      <text>合同样板：</text>
+      <image src=''></image>
+      <text class='anli'>案例</text>
+    </view>
+    <view class='warning'>请参考下载网盘内文档并进行撰写，并寄往我司指定地址。</view>
+  </view>
+  <view class='link_pan'>
+    <text>网盘地址：XXXXXXXXX，</text>
+    <text>提取码：xxxx</text>
+    <text class='copy'>一键复制</text>
+  </view>
+  <view class='upfile'>
+    <text>上传合同：</text>
+    <view class='toup'>
+      <image src='{{imgs}}' wx:if="{{imgs}}" class='user_img'></image>
+      <image src='/img/jia.png' class='upimg' bindtap='upload' wx:if='{{!imgs}}'></image>
+      <van-icon wx:if="{{imgs}}" catchtap='delimg' name="close" size='30px'/>
+    </view>
+  </view>
+  <view class='warning'>文件仅支持：jpg、jpeg、png、pdf</view>
+</view>
+<view class='btns'>
+  <button bindtap='submit'>下一步</button>
+</view>
+</block>

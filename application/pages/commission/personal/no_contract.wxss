@@ -1,0 +1,56 @@
+/* pages/app_in/app_in.wxss */
+
+.container {
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+
+.scroll {
+  font-size: 24rpx;
+  font-family: MicrosoftYaHei;
+  color: rgba(51, 51, 51, 1);
+  width: 100%;
+  height: 900rpx;
+}
+
+.scroll::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent;
+}
+.yorn{
+  width: 100%;
+  padding: 40rpx 0;
+  font-size:22rpx;
+  font-family:MicrosoftYaHei;
+  color:rgba(153,153,153,1);
+  display: flex;
+  justify-content: flex-start;
+}
+
+checkbox .wx-checkbox-input{
+  height: 30rpx;
+  width: 30rpx;
+}
+.read{
+  display: flex;
+  align-items: center;
+}
+.btns{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  padding: 0 20rpx 20rpx 20rpx;
+  width: 100%;
+  height: 100rpx;
+}
+.btns button{
+  width: 100%;
+  height: 100%;
+  background:rgba(10,153,70,1);
+  border-radius:10rpx;
+  font-size:30rpx;
+  font-family:MicrosoftYaHei;
+  color:rgba(255,255,255,1);
+}

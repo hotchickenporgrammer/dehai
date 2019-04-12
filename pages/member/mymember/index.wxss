@@ -1,0 +1,38 @@
+@import "../../common/city-picker.wxss";
+@import "../../../__wuBaseWxss__/1.wxss";
+
+@import "../../index/openauth.wxss";
+.myimages{
+  border-radius:50%;
+  width:150rpx;
+  height:150rpx;
+}
+.usertext{
+  font-size:30rpx;
+  color:#666;
+}
+.myusers{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding:30rpx;
+}
+.myuserstext{
+  font-size:40rpx;
+  color:#444444;
+}
+.myusers-inner{
+  margin-top:40rpx;
+  margin-bottom:20rpx;
+  font-size:31rpx;
+  color:#555555;
+}
+.myinfos{
+  color:#fff;
+  font-size:30rpx;
+  border-radius:29rpx;
+  background:#BCBCBC;
+  text-align:center;
+  height:58rpx;
+  line-height:58rpx;
+}

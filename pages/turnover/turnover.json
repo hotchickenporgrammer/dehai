@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "select_picker": "/component/picker/picker"
-  },
-  "navigationBarTitleText": "营业额"
-}

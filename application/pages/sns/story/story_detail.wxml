@@ -1,0 +1,24 @@
+<block wx:if='{{!show}}'>
+  <loading>加载中...</loading>
+</block>
+<block wx:if="{{show}}">
+<view class='container'>
+    <view class='top'>
+      <view class='consult_title'>{{post.title}}</view>
+      <view class='consult_info'>
+          <text class='user_name'>{{post.nickname}}</text>
+          <text class='platform'>{{post.account}}</text>
+      </view>
+      <view class='date'>{{post.year}}年{{post.month}}月{{post.day}}日</view>
+    </view>
+    <view style="height:40rpx;">
+      
+    </view>
+    <view class="content-text">
+      <import src="/utils/wxParse/wxParse.wxml" />
+        <view class='wxParse'>
+          <template is='wxParse' data='{{wxParseData:content.nodes }}' />
+        </view>
+    </view>
+</view>
+</block>

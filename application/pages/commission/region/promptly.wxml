@@ -1,0 +1,61 @@
+<!--pages/promptly/promptly.wxml-->
+<view class='container'>
+  <van-steps steps="{{ steps }}" active="{{ active }}" custom-class='step_h' />
+  <view class='items'>
+    <text>经营地址：</text>
+    <view bindtap='selectArea'>
+      <text wx:if="{{detail.province}}">{{detail.province}}{{detail.city}}{{detail.area}}</text>
+      <text wx:else>{{province}}</text>
+    </view>
+  </view>
+  <view class='items'>
+    <text>联系人姓名：</text>
+    <input type='text' data-type='name' bindinput='onChange' placeholder='请输入联系人姓名'></input>
+  </view>
+  <view class='items'>
+    <text>联系人电话：</text>
+    <input type='text' data-type='mobile' bindinput='onChange' placeholder='请输入联系人电话'></input>
+  </view>
+  <view class='items'>
+    <text>联系人地址：</text>
+    <input type='text' data-type='address' bindinput='onChange' placeholder='请输入联系人地址'></input>
+  </view>
+  <view class='items'>
+    <text>身份证号码：</text>
+    <input type='text' data-type='userId' bindinput='onChange' placeholder='请输入身份证号码'></input>
+  </view>
+  <view class='card_info'>证件信息：</view>
+  <view class='up_idcard'>
+    <block wx:for="{{imgs}}" wx:key="index" wx:if="{{index<2}}">
+      <view class='up_main' bindtap='upload' data-index="{{index}}" data-type="imgs">
+        <image src='/img/zhanxiangji.png' wx:if="{{!imgs[index]}}" class='up_logo'></image>
+        <image wx:if="{{imgs[index]}}" src='{{imgs[index]}}' class='user_img'></image>
+        <text wx:if="{{!imgs[index]&&index==0}}">上传身份证正面</text>
+        <text wx:if="{{!imgs[index]&&index==1}}">上传身份证反面</text>
+        <van-icon wx:if="{{imgs[index]}}" catchtap='delimg' data-index="{{index}}" name="close" size='30px' />
+      </view>
+    </block>
+  </view>
+  <view class='card_info'>手持身份证证件照：</view>
+  <view class='up_idcard'>
+    <view class='up_main' bindtap='upload' data-index='2'>
+      <image wx:if="{{!imgs[2]}}" src='/img/zhanxiangji.png' class='up_logo'></image>
+      <image wx:if="{{imgs[2]}}" src='{{imgs[2]}}' class='user_img'></image>
+      <text wx:if="{{!imgs[2]}}">上传手持照</text>
+      <van-icon wx:if="{{imgs[2]}}" catchtap='delimg' data-index="2" name="close" size='30px' />
+    </view>
+    <view class='up_main_two'>
+      <image src='http://img2.y01.cn/images/4/2019/04/XvGl8zISLb9CIBhVchVIj9thV3bAQ6.png' class='up_logo'></image>
+      <text>手持身份证照案例</text>
+    </view>
+  </view>
+  <view class='warning'>
+    <text>上传时请确保身份证照片内姓名，身份证，有效期清晰</text>
+    <text>文件仅支持：jpg、jpeg、png</text>
+  </view>
+</view>
+
+<view class='btns'>
+  <button bindtap='toxinye_heton'>下一步</button>
+</view>
+<include src='/pages/common/city-picker.wxml' />

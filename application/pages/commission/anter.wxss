@@ -1,0 +1,50 @@
+/* pages/firm/firm.wxss */
+.container{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+  width: 100%;
+}
+.item{
+  padding: 35rpx 15rpx 30rpx 30rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:28rpx;
+  font-family:MicrosoftYaHei;
+  color:rgba(51,51,51,1);
+  border-bottom: 1rpx solid #eee;
+  background:#fff;
+}
+.items{
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size:28rpx;
+  font-family:MicrosoftYaHei;
+  color:rgba(51,51,51,1);
+  border-bottom: 1rpx solid #eee;
+}
+.van-cell {
+  height:53px;
+  line-height:45px;
+  font-size:35rpx;
+}
+.itembg{
+  border-bottom: none;
+  background:rgba(244,244,244,1);
+}
+.items .container{
+  display: flex;
+  justify-content: space-between;
+}
+
+.items .container image{
+  width:26rpx;
+  height:25rpx;
+}
+.items image{
+  width:15rpx;
+  height:26rpx;
+  margin-right:10rpx;
+}

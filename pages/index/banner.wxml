@@ -1,0 +1,35 @@
+<view class='index-banner' wx:if="{{item.data.length>0}}">
+    <swiper autoplay="{{autoplay}}" circular="true" class="index-adcs-sqiper index-banner-sqiper {{item.style.dotstyle}} left" duration="{{duration}}" indicatorColor="{{item.style.background}}" indicatorDots="true" interval="{{interval}}" style="{{bannerheight?'height:' + bannerheight + 'px':'height:auto'}}">
+        <block wx:for='{{item.data}}' wx:for-item='item' wx:for-index='idx' wx:key="*this">
+            <swiper-item>
+                <view bindtap="navigate" class="index-advs-navigator" data-appid="{{item.appid}}" data-appurl="{{item.appurl}}" data-phone="{{item.phone}}" data-url="{{item.linkurl}}">
+                    <image mode="widthFix" src="{{item.imgurl}}" bindload="imagesHeight" class="advimg" data-type="bannerheight"></image>
+                </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <view wx:if="{{shoptipstitle!=''}}" bindtap="shoptipsshow" class='tips-list' style="background-color:white;height:80rpx;margin-top:10rpx;margin-bottom:10rpx;">
+      <view wx:for="{{shoptipstitle}}" wx:for-index="index" wx:for-item="item">
+        <image style="width:40rpx;height:40rpx;" src="{{item.thumb}}"></image><text style="font-size: 30rpx;padding-left:10rpx;color:#5A5A5A;">{{item.title}}</text>
+      </view>
+    </view>
+    
+</view>
+<view wx:if="{{tipsshow}}" class="fui-modal goods-picker in goodsdetail" style="height:85%;">
+	<view class="option-picker" style="height:100%;">
+		<view class="option-picker-inner" style="height:100%;">
+			<view class="title">
+        <view class="title" style="text-align:center;margin-top:20rpx;margin-bottom:20rpx;">售后保障</view>
+			</view>
+			<view class="option-picker-options" style="height:80%">
+				<view wx:for="{{shoptips}}" wx:for-index="index" wx:for-item="item" class="option-picker-cell option spec">
+					<view class="title"><image style="width:30rpx;height:30rpx;" src="{{item.thumb}}"></image><text style="padding-left:10rpx;">{{item.title}}</text></view>
+					<view class="select">
+						<text>{{item.content}}</text>
+					</view>
+				</view>
+      </view>
+		</view>
+	</view>
+	<view class="fui-navbar" bindtap="shoptipshide" style="height:42px;line-height:42px;background-color:red;text-align:center;color:white;margin-bottom:{{isIpx?'38':'0'}}rpx;">完成</view>
+</view>

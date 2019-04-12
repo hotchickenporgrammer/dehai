@@ -1,0 +1,54 @@
+<block wx:if='{{!show}}'>
+  <loading>加载中...</loading>
+</block>
+<block wx:if="{{show}}">
+<scroll-view scroll-x="true" class='video-scroll'>
+  <block wx:if="{{planting.length>0}}">
+    <block wx:for="{{planting}}" wx:key wx:for-item='items'>
+      <view class='video_item' bindtap='toVideoDetail' data-id="{{items.id}}">
+        <view class='video_title'>{{items.title}}</view>
+        <image src='{{items.images[0]}}' mode='scaleToFill' class='video_img'>
+        </image>
+      </view> 
+    </block>
+  </block>
+  <block wx:else>
+    <view class='video_item'>
+      <view class='video_title'>暂无数据</view>
+    </view> 
+  </block>
+</scroll-view>
+<view class='tab'>
+  <van-tabs active="{{ active }}" bind:change="onChange" swipeable="true"  animated="true" color="#00B900" nav-class="tabs">
+    <block wx:for="{{boards}}" wx:key wx:for-item="item">
+    <van-tab title="{{item.title}}" tab-class="tab_item">
+      <block wx:if="{{item.post.length>0}}">
+      <block wx:for="{{item.post}}" wx:key wx:for-item="res">
+      <view class='tab_video_item' bindtap='toVideoDetail' data-id="{{res.id}}">
+        <view class='left'>
+          <view class='tab_video_title'>{{res.title}}</view>
+          <view class='tab_video_info'>
+            <image src='/img/yanjing.png'></image>
+            <text class='lookNum'>{{res.views}}</text>
+            <text class='date'>{{res.date}}</text>
+          </view>
+        </view>
+        <view class='right'>
+          <image class="right_img" src='mode='scaleToFill' src='{{res.images[0]}}'> 
+          </image>
+        </view>
+      </view>
+      </block>
+      </block>
+      <block>
+      <view class="tab_video_item">
+        <view style="text-align:center;color:#666;width:100%;">暂无数据！</view> 
+      </view>
+      </block>
+    </van-tab>
+    </block>
+  </van-tabs>
+  
+</view>
+<include src='/pages/common/menu.wxml' />
+</block>

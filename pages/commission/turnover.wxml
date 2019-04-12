@@ -1,0 +1,66 @@
+<block wx:if='{{!show}}'>
+  <loading>加载中...</loading>
+</block>
+<block wx:if='{{show}}'>
+<view class='header_top'>
+  <view class='picker'>
+    <picker class='center' mode="date" fields="month" start="0001-01-01" end="9999-12-31" bindchange="getDateTime">
+      <view class="selectDate">
+        {{years}}年{{months}}月
+        <image src="/img/xia.png" />
+      </view>
+    </picker>
+  </view>
+  <view class='spend'>营业额：
+    <text class='total'>{{countnum}}</text>元
+  </view>
+</view>
+<view class='select_nav'>
+  <view class='nav_top'>
+    <view class='nav_item {{!isshow?"":"nav_no"}}' bindtap='showList'>
+      <view class='item_top'>
+        <image src='/img/text.png' wx:if="{{!isshow}}" class='text_img'></image>
+        <image src='/img/text1.png' wx:if="{{isshow}}" class='text1_img'></image>
+        当月订单量
+      </view>
+      <view>{{list.length}}条</view>
+    </view>
+    <view class='nav_item {{isshow?"":"nav_no"}}' bindtap='showLists'>
+      <view class='item_top'>
+        <image src='/img/yonghu.png' wx:if="{{isshow}}" class='text_img'></image>
+        <image src='/img/yonghu1.png' wx:if="{{!isshow}}" class='text1_img'></image>
+        我的会员
+      </view>
+      <view>{{downtotal}}位</view>
+    </view>
+  </view>
+  <block wx:if="{{list.length>0}}">
+  <block wx:for="{{list}}" wx:key wx:for-item="i">
+    <view class='shoplist' wx:if="{{!isshow}}">
+      <view class='item_left'>
+        <view class='num'>{{i.createtime}}</view>
+        <view class='time'>{{i.level}}
+        </view>
+      </view>
+      <view class="item_right">营业额：
+        <text class='price'>￥{{i.price}}</text>
+      </view>
+    </view>
+  </block>
+  </block>
+  <block wx:else>
+    <view style="margin-top:40rpx;text-align:center;colo:color:rgba(51,51,51,1);font-size">暂无数据！</view>
+  </block>
+  <block wx:for="{{order_info[1].data}}" wx:key wx:for-item="j">
+    <view class='shoplist' wx:if="{{isshow}}">
+      <view class='item_left vip_left'>
+        <image src='{{j.avater}}' class="avater"></image>
+        <text>{{j.name}}</text>
+      </view>
+      <view class="item_right">营业额：
+        <text class='price'>￥{{j.money}}</text>
+      </view>
+    </view>
+  </block>
+</view>
+</block>

@@ -1,0 +1,34 @@
+<view style="height:100%;width:100%;background:#fff;">
+  <block wx:if='{{!show}}'>
+    <loading>加载中...</loading>
+  </block>
+  <block wx:if='{{show}}'>
+    <view class='container'>
+      <view class='item'>
+        <text>入驻类型：</text>
+        <block wx:if="{{type=='1'}}">
+        <text>自然人</text>
+        </block>
+        <block wx:if="{{type=='2'}}">
+        <text>商企</text>
+        </block>
+      </view>
+    </view>
+    <view class='container'>
+      <van-collapse value="{{ activeNames }}" bind:change="onChange">
+        <block wx:for="{{levelarr}}" wx:key wx:for-item="item">
+          <van-collapse-item title="{{item.levelname}}" name="{{item.id}}">
+            <view bindtap="apply" class='items' data-id="{{item.id}}" data-level="{{item.level}}" style="padding-top:0;">
+              <text>立即入驻</text>
+              <image src='/img/right.png'></image>
+            </view>
+            <view data-id="{{item.id}}" bindtap="treate" class='items'>
+              <text>{{item.levelname}}入驻说明</text>
+              <image src='/img/right.png'></image>
+            </view>
+          </van-collapse-item>
+        </block>
+      </van-collapse>
+    </view>
+  </block>
+</view>

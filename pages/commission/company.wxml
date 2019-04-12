@@ -1,0 +1,18 @@
+<block wx:if='{{!show}}'>
+  <loading>加载中...</loading>
+</block>
+<block wx:if="{{show}}">
+<view class='container'>
+    <block wx:if="{{post.length>0}}">
+    <view class="content-text">
+      <import src="/utils/wxParse/wxParse.wxml" />
+        <view class='wxParse'>
+          <template is='wxParse' data='{{wxParseData:content.nodes }}' />
+        </view>
+    </view>
+    </block>
+    <block>
+    <view style="text-align:center;color:#666;margin-top:30rpx;">没有找到数据</view>
+    </block>
+</view>
+</block>

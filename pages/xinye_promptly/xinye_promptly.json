@@ -1,8 +1,0 @@
-{
-  "usingComponents": {
-    "van-steps": "/dist/steps/index",
-    "van-area": "/dist/area/index",
-    "van-popup": "/dist/popup/index"
-  },
-  "navigationBarTitleText": "入驻申请"
-}

@@ -1,5 +1,0 @@
-<!--pages/contract/contract.wxml-->
-<view class='container'>
-  <view class='contract_title'>行业合伙人入驻</view>
-  <view class='content_text'>{{content_text}}</view>
-</view>

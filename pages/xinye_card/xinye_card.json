@@ -1,6 +1,0 @@
-{
-  "usingComponents": {
-    "van-steps": "/dist/steps/index"
-  },
-  "navigationBarTitleText": "申请入驻"
-}

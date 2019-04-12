@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "van-steps": "/vant-ui/steps/index",
+    "van-area": "/vant-ui/area/index",
+    "van-popup": "/vant-ui/popup/index",
+    "van-icon": "/vant-ui/icon/index"
+  },
+  "navigationBarTitleText": "入驻申请"
+}

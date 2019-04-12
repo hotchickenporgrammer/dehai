@@ -1,0 +1,44 @@
+<!--pages/promptly/promptly.wxml-->
+<view class='container'>
+  <van-steps steps="{{ steps }}" active="{{ active }}" custom-class='step_h' />
+  <view class='items'>
+    <text>经营地址：</text>
+    <view bindtap='selectArea'>
+      <text wx:if="{{detail.province}}">{{detail.province}}{{detail.city}}{{detail.area}}</text>
+      <text wx:else>{{province}}</text>
+    </view>
+  </view>
+  <view class='items'>
+    <text>企业简称：</text>
+    <input type='text' data-type="cohr" bindinput='onChange' placeholder='例: 德海严防'></input>
+  </view>
+  <view class='items'>
+    <text>企业全称：</text>
+    <input type='text' data-type="company_name" bindinput='onChange' placeholder='请输入企业全称'></input>
+  </view>
+  <view class='items'>
+    <text>企业代码：</text>
+    <input type='text' data-type="company_code" bindinput='onChange' placeholder='请输入企业代码'></input>
+  </view>
+  <view class='items'>
+    <text>联系人姓名：</text>
+    <input type='text' data-type="name" bindinput='onChange' placeholder='请输入联系人姓名'></input>
+  </view>
+  <view class='items'>
+    <text>联系人电话：</text>
+    <input type='text' data-type="mobile" bindinput='onChange' placeholder='请输入联系人电话'></input>
+  </view>
+  <view class='upfile'>
+    <text>上传营业执照：</text>
+    <view class='toup'>
+      <image src='{{company_img}}' wx:if="{{company_img}}" class='user_img'></image>
+      <image src='/img/jia.png' class='upimg' bindtap='upload' wx:if='{{!company_img}}'></image>
+    </view>
+  </view>
+  <view class='warning'>文件仅支持：jpg、jpeg、png、pdf</view>
+</view>
+
+<view class='btns'>
+  <button bindtap='submit'>下一步</button>
+</view>
+<include src='/pages/common/city-picker.wxml' />

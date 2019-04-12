@@ -1,0 +1,39 @@
+<loading wx:if="{{!show}}">加载中...</loading>
+<view wx:if="{{show}}">
+  <van-tabs active="{{active}}" bind:change="" sticky>
+    <block wx:for='{{category}}' wx:for-item='item' wx:for-index='indexs' wx:key="cate" style="position: fixed;">
+      <van-tab title="{{item.name}}">
+        <block wx:for='{{item.goods}}' wx:for-item='items' wx:for-index='indexss' wx:key="cates">
+          <view class="fui-goods-group">
+            <view class="fui-goods-item">
+              <navigator hover-class="none" open-type="navigate" url="/pages/goods/detail/index?id={{items.id}}">
+                <view class='image' style="background-image:url({{items.thumb}});width:115px;height:115px;"></view>
+              </navigator>
+              <view class="detail goods_list_detail">
+                <navigator hover-class="none" open-type="navigate" url="/pages/goods/detail/index?id={{items.id}}">
+                  <view class="name">{{items.title}}</view>
+                </navigator>
+                <view class="price">
+                  <view class="text">￥{{items.marketprice}}</view>
+                  <view bindtap="selectPicker" data-nuytype="buy" data-id="{{items.id}}">
+                    <text class="icox icox-gouwuche4"style="font-size:24px; color:#ff5555"></text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </block>
+        <view class="fui-goods-group" wx:if='{{!item.goods.length}}' >
+          <view class="fui-goods-item">
+            <view style="text-align:center;width:100%;padding-top:30rpx;">
+              <image src="http://img2.y01.cn/images/4/2019/02/x607LlH7e2797Q55676Uo6Dl0EMoL6.png"></image>
+              <view style="padding-top:15rpx;padding-bottom:15rpx;font-size:25rpx;color:#7D7E80;">暂无数据！</view>
+            </view>
+          </view>
+        </view>
+      </van-tab>
+    </block>
+  </van-tabs>
+</view>
+<include src="/pages/common/goods-picker.wxml"></include>
+ <include src="/pages/common/menu.wxml"></include>

@@ -1,0 +1,19 @@
+<block wx:if='{{!show}}'>
+  <loading>加载中...</loading>
+</block>
+<block wx:if="{{show}}">
+<view class='container'>
+  <block wx:if="{{detail}}">
+  <view class='contract_title'>{{detail.title}}</view>
+  <view class="content-text">
+    <import src="/utils/wxParse/wxParse.wxml" />
+      <view class='wxParse'>
+        <template is='wxParse' data='{{wxParseData:content.nodes }}' />
+      </view>
+  </view>
+  </block>
+  <block wx:if="{{!detail}}">
+  <view class='contract_title'>没有找到相关数据！</view>
+  </block>
+</view>
+</block>

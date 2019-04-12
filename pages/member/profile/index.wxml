@@ -1,0 +1,144 @@
+<!-- <block wx:if='{{!show}}'>
+  <loading>加载中...</loading>
+</block> -->
+<block wx:if='{{show}}'>
+<view class='container'>
+  <view class='header_top'>
+    <image src='/img/bg.png' class='bg'>
+      <view class='user_info'>
+        <view class='left_avater'>
+          <image src='{{member.avatar}}' class='avater'></image>
+        </view>
+        <view class='desc'>
+          <view class='desc_left'>
+            <view class='user_name'>昵称：{{member.nickname}}</view>
+            <view class='vip_num'>会员号：{{member.levelname}}</view>
+            <view class='partner_num'>合伙人号：{{member.id}}</view>
+          </view>
+          <view class='desc_right' bindtap='userinfos'>
+            <view>账户管理</view>
+            <image src='/img/right.png'></image>
+          </view>
+        </view>
+      </view>
+      <view class='log_active'>
+        <view class='nav_item' bindtap='myorders' data-status="0">
+          <image class='item_logo' src='/img/wait.png'></image>
+          <text class='item_text'>待付款</text>
+        </view>
+        <view class='nav_item' bindtap='myorders' data-status="6">
+          <image class='item_logo' src='/img/time.png'></image>
+          <text class='item_text'>待审核</text>
+        </view>
+        <view class='nav_item' bindtap='myorders' data-status="2">
+          <image class='item_logo' src='/img/down.png'></image>
+          <text class='item_text'>待收货</text>
+        </view>
+        <view class='nav_item' bindtap='myorders' data-status="3">
+          <image class='item_logo' src='/img/nike.png'></image>
+          <text class='item_text'>已完成</text>
+        </view>
+      </view>
+    </image>
+  </view>
+  <view class='list'>
+    <view class='list_item' bindtap='topartner'>
+      <view class='item_left'>
+        <image src='/img/nokia.png' mode="widthFix"></image>
+      </view>
+      <view class='item_right'>
+        <text>申请成为</text>
+        <text>合伙人</text>
+      </view>
+    </view>
+    <view class='list_item' bindtap='toturnover'>
+      <view class='item_left'>
+        <image src='/img/money.png' mode="widthFix"></image>
+      </view>
+      <view class='item_right'>
+        <text>营业额</text>
+        <text class='money'>{{countnum}}元</text>
+      </view>
+    </view>
+    <view class='list_item' bindtap='tospend'>
+      <view class='item_left'>
+        <image src='/img/comsume.png' mode="widthFix"></image>
+      </view>
+      <view class='item_right'>
+        <text>我的消费</text>
+        <text class='money'>{{ordercounts}}元</text>
+      </view>
+    </view>
+    <view class='list_item' bindtap='mymoney'>
+      <view class='item_left'>
+        <image src='/img/sql.png' mode="widthFix"></image>
+      </view>
+      <view class='item_right'>
+        <text>我的佣金</text>
+        <text class='money'>{{commission_ok}}元</text>
+      </view>
+    </view>
+    <view class='list_item' bindtap="mymember">
+      <view class='item_left'>
+        <image src='/img/user.png' mode="widthFix"></image>
+      </view>
+      <view class='item_right'>
+        <view class='item_name'>我的会员
+          <image src='/img/right.png'></image>
+        </view>
+        <text class='info'>我推荐的会员明细</text>
+      </view>
+    </view>
+    <view class='list_item' bindtap='toorder'>
+      <view class='item_left'>
+        <image src='/img/check.png' mode="widthFix"></image>
+      </view>
+      <view class='item_right'>
+        <view class='item_name'>提成订单
+          <image src='/img/right.png'></image>
+        </view>
+        <text class='info'>我的提成订单明细</text>
+      </view>
+    </view>
+    <view class='list_item' bindtap='myaddress'>
+      <view class='item_left'>
+        <image src='/img/nav.png' mode="widthFix"></image>
+      </view>
+      <view class='item_right' >
+        <view class='item_name'>收货地址
+          <image src='/img/right.png'></image>
+        </view>
+        <text class='info'>我的收货地址管理</text>
+      </view>
+    </view>
+    <view class='list_item' bindtap='shareuser'>
+      <view class='item_left'>
+        <image src='/img/share.png' mode="widthFix"></image>
+      </view>
+      <view class='item_right'>
+        <view class='item_name'>分享好友
+          <image src='/img/right.png'></image>
+        </view>
+        <text class='info'>喜欢就要分享哦！</text>
+      </view>
+    </view>
+    <view class='list_item' bindtap='showcompany'>
+      <view class='item_left'>
+        <image src='/img/lou.png' mode="widthFix"></image>
+      </view>
+      <view class='item_right'>
+        <view class='item_name'>关于德海严防
+          <image src='/img/right.png'></image>
+        </view>
+        <text class='info'>可查看公司简介</text>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+<include src="/pages/common/menu.wxml"></include>
+</block>
+<view class="model" wx:if="{{modelShow}}">
+  <include src="/pages/index/openauth.wxml"></include>
+</view>
